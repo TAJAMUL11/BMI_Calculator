@@ -714,6 +714,14 @@ footer{
   .heightDiv .ageNum{
     padding: .4rem .5rem; 
   }
+  
+  .footericons p{
+    font-size: 1rem;
+  }
+
+  .footericons i{
+    font-size: 1.4rem;
+  }
 
 
 }
@@ -808,13 +816,6 @@ footer{
     font-size: .95rem;
   }
 
-  .footericons p{
-    font-size: 1rem;
-  }
-
-  .footericons i{
-    font-size: 1.4rem;
-  }
 
 }
 
