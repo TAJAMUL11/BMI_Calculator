@@ -1,0 +1,835 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General styles */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding: 4.6rem;
+}
+:root{
+  --BGCOLOR : #ffffff;
+  --TEXT-COLOR : #000000;
+  --BOX-TEXT-COLOR: #fff;
+  --BOX-COLOR :rgb(29, 101, 236);
+  --FONT-WEIGHT : 600;
+  --btn-shadow : 0 0 .4rem rgb(29, 101, 236);
+  --SHADOW : 0 0 .3rem #000000;
+  --NAVBAR-BG : #ffffff1f;
+
+
+}
+
+.dark-mode{
+  --BGCOLOR : #000000;
+  --TEXT-COLOR : #ffffff;
+  --BOX-TEXT-COLOR: #fff;
+  --SHADOW : 0 0 .3rem #ffffff;
+  --NAVBAR-BG : #0000001f;
+}
+
+/* extra styles */
+
+.nowrap{
+  white-space: nowrap;
+ 
+}
+body{
+  position: relative;
+  background-color: var(--BGCOLOR);
+}
+
+
+
+/* header styles */
+
+header{
+  background-color: var(--BGCOLOR);
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 0 .3rem var(--TEXT-COLOR);
+
+}
+
+.wideScreen{
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  padding: .5rem .1rem;
+  text-align: center;
+}
+
+
+.wideScreen a {
+  text-decoration: none;
+  font-size: 1.55rem;
+  color: var(--TEXT-COLOR);
+  padding: .4rem;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  margin: .2rem 1.3rem;
+  font-weight: 500;
+
+ }
+
+.wideScreen a:first-child{
+  color: var(--BOX-COLOR);
+  font-weight: var(--FONT-WEIGHT);
+  font-size: 1.8rem;
+}
+
+.wideScreen a:hover, nav a:active, nav a:focus{
+  color: var(--BOX-COLOR);
+
+}
+
+ .wideScreen .login{
+  margin-left: auto;
+  background-color: var(--BOX-COLOR);
+  color: var(--TEXT-COLOR);
+  font-weight: var(--FONT-WEIGHT);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: .3s ease-in-out;
+  border-radius: 7px;
+  padding: .7rem .9rem;
+ }
+
+ .wideScreen .login:hover{
+  background-color: transparent;
+  border: 1px solid var(--TEXT-COLOR);
+ }
+
+
+
+ /* navbar mobile */
+
+ 
+.forMobile{
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-height: 100vh;
+  width: 350px;
+  background: var(--NAVBAR-BG);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: var(--SHADOW);
+}
+
+nav i{
+  font-size: 2.3rem;
+  color: var(--BOX-COLOR);
+ }
+
+.forMobile a{
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 1rem;
+    color: var(--TEXT-COLOR);
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: var(--FONT-WEIGHT);
+    border-bottom: 1px solid var(--TEXT-COLOR);
+   
+}
+
+.forMobile a:hover{
+  color: var(--BOX-COLOR);
+  background-color: #0000000e;
+}
+
+.forMobile .noBorder{
+  border: none;
+  font-size: 3rem;
+}
+
+.menuIcon i{
+  display: none;
+  padding: .7rem;
+  margin-top: .3rem;
+}
+
+ /* toggle ligh and dark */
+
+.wideScreen .toggle-icon{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    margin: .7rem .5rem;
+    padding: .2rem;
+  }
+
+  .toggle-icon img{
+      width: 100%;
+      height: 100%;
+  }
+
+  /* home section style */
+
+#home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--BGCOLOR);
+  position: relative;
+
+}
+
+#home .home__details{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: auto;
+  
+
+}
+.home__details h2{
+  color: var(--TEXT-COLOR);
+  font-weight: var(--FONT-WEIGHT);
+  font-size: 2.5rem;
+}
+.home__details p{
+  color: var(--TEXT-COLOR);
+  font-size: 3rem;
+}
+
+.home__details .btn__home{
+  width: 400px;
+  border: none;
+  outline: none;
+  background-color: var(--BOX-COLOR);
+  transition: .3s ease-in-out;
+  position: absolute;
+  bottom: 20%;
+  padding: 1rem;
+  border-radius: 7px;
+ 
+}
+
+
+.home__details .btn__home:hover{
+  box-shadow: var(--btn-shadow);
+}
+.btn__home a{
+  color: var(--BOX-TEXT-COLOR);
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: var(--FONT-WEIGHT);
+  padding: 1rem;
+}
+
+#home .home__Image{
+  width: 40%;
+  height: 100%;
+
+}
+img{
+  display: block;
+}
+
+.home__Image img{
+  width: min(100%, 40vw);
+  height: 99.9vh;
+  border-radius: 2px;
+}
+
+
+
+/* BMI Section   style*/
+
+#BMI{
+  min-height: 100vh;
+  background-color: var(--BGCOLOR);
+  padding: 2rem;
+  box-shadow: 0 0 .3rem #000;
+}
+
+
+#BMI .card{
+  margin: .1rem auto;
+  height: auto;
+}
+
+#BMI .checkOne{
+  background-color: var(--BOX-COLOR);
+  padding: .4rem;
+  box-shadow: var(--btn-shadow);
+  border-radius: 4px ;
+}
+#BMI .white:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cardText h2{
+  color: var(--TEXT-COLOR);  
+}
+
+.cardText p{
+  color: var(--TEXT-COLOR); 
+  font-weight: 400;
+}
+
+.yoga-logo{
+  margin-left: 1.3rem;
+  margin-top:  1.3rem;
+}
+
+
+/* BMI Heading */
+
+#BMI h1{
+  color: var(--TEXT-COLOR);
+  font-weight: var(--FONT-WEIGHT);
+  text-align: center;
+  margin-bottom: 1rem ;
+}
+
+#BMI .genderdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .7rem;
+}
+
+#BMI .btn-group{
+  box-shadow: var(--SHADOW);
+  border: none;
+}
+
+.btn-group .btn{
+  text-align: center;
+  width: 270px;
+  height: 50px;
+  font-size: 1.3rem;
+  color: var(--TEXT-COLOR); 
+}
+
+.btn i{
+  padding-right: .3rem;
+}
+
+.btn-primary-outline,
+.btn-primary-outline:hover,
+.btn-primary-outline:active,
+.btn-primary-outline:visited {
+  background-color: var(--BOX-COLOR);
+}
+
+
+#BMI .ageContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.ageContainer .agearea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.agearea .ageLabel{
+  margin: .1rem .5rem;
+  color: var(--TEXT-COLOR);
+}
+
+.ageContainer .ageNum{
+  padding: .7rem .5rem;
+  border: none;
+  outline: none;
+  margin: .5rem 0;
+  color: #ffffff;
+  background-color: var(--BOX-COLOR);
+  
+}
+
+.container input{
+  border-radius: 2.2rem;
+  width: 150px;
+}
+
+.ageContainer .weightdiv{
+  margin: .3rem;
+}
+
+.weightdiv label{
+  color: var(--TEXT-COLOR);
+  margin: .2rem;
+}
+
+.weightdiv .ageNum{
+  padding: .7rem .5rem;
+  border: none;
+  outline: none;
+  margin: .5rem 0;
+}
+
+
+.ageContainer .heightDiv{
+  margin: .3rem;
+}
+
+.heightDiv label{
+  color: var(--TEXT-COLOR);
+  margin: .2rem;
+}
+
+.heightDiv .ageNum{
+  padding: .7rem .5rem;
+  border: none;
+  outline: none;
+  margin: .5rem 0;
+}
+
+
+
+.btn-group input[type="radio"]:checked + label {
+  background-color: var(--BOX-COLOR); 
+  color: var(--TEXT-COLOR); 
+}
+
+.weight input[type="radio"]:checked + label {
+  background-color: var(--BOX-COLOR); 
+  color: var(--TEXT-COLOR);
+}
+
+.height input[type="radio"]:checked + label {
+  background-color: var(--BOX-COLOR); 
+  color: var(--TEXT-COLOR);
+}
+
+
+#BMI .calculateBMIBTN{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: .9rem auto;
+}
+
+.calculateBMIBTN .calculate{
+  width: 400px;
+  border: none;
+  outline: none;
+  background-color: var(--BOX-COLOR);
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--BOX-TEXT-COLOR);
+  font-weight: var(--FONT-WEIGHT);
+  transition: .3s ease-in-out;
+  border-radius: 7px;
+  
+}
+
+.calculateBMIBTN .calculate:hover{
+  box-shadow: var(--btn-shadow);
+}
+
+
+
+/* footer section*/
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  background-color: var(--BGCOLOR);
+  box-shadow: 0 0 .3rem var(--TEXT-COLOR);
+}
+
+.footericons p{
+  font-size: 1.02rem;
+  color: var(--TEXT-COLOR);
+  font-weight: var(--FONT-WEIGHT);
+}
+
+.footericons a{
+  text-decoration: none;
+  margin: 0 .4rem;
+  padding: 0 .4rem;
+  transition: .3s ease-in-out;
+
+}
+
+.footericons i:hover{
+  transform: scale(94%);
+}
+
+.footericons i{
+  font-size: 1.5rem;
+  color: var(--TEXT-COLOR);
+
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width: 1210px){
+  html{
+    font: 87%;
+
+  }
+  .container input{
+    width: 200px;
+  }
+  #BMI label{
+    font-size: 1.6rem;
+  }
+
+
+}
+
+
+@media screen and (max-width: 1050px){
+
+  .wideScreen a{
+    font-size: 1.4rem;
+  }
+
+
+  .home__details h2{
+    font-size: 2.2rem;
+  }
+
+  .home__details p{
+    font-size: 2.35rem;
+  }
+
+ 
+  
+  .home__details .btn__home{
+    width: 350px;
+    bottom: 25%;
+   
+  }
+  .container input{
+    width: 180px;
+  }
+
+
+}
+
+
+@media (max-width : 876px){
+  .hideOnMobile{
+      display: none;
+  }
+
+  .wideScreen a:first-child{
+    font-size: 2rem;
+    margin-right: auto;
+  }
+  .wideScreen .login{
+    font-size: 1.1rem;
+    padding: 1rem;
+   }
+
+   .wideScreen .toggle-icon{
+    width: 37px;
+    height: 37px;
+  }
+
+  .menuIcon i{
+      display: block;
+  }
+
+  .home__details h2{
+    font-size: 1.8rem;
+  }
+  .home__details p{
+    font-size: 1.85rem;
+  }
+  
+  .home__details .btn__home{
+    width: 300px;
+    
+  }
+  .container input{
+    width: 170px;
+  }
+  #BMI label{
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width : 786px){
+
+  #home{
+    flex-direction: column-reverse;
+  }
+
+  #home .home__details{
+    width: 100%;
+    margin: 1.1rem 0;
+
+  }
+  .home__details h2{
+    font-size: 2.7rem;
+  }
+
+  .home__details p{
+    font-size: 1.9rem;
+  }
+
+  #home .home__Image{
+    width: 100%;
+    
+  }
+  .home__Image img{
+    width: 70vw;
+    height: auto;
+    margin: 2rem auto 1rem;
+  }
+
+
+  .home__details .btn__home{
+    position: static;
+  }
+
+  #BMI.card{
+    margin: .1rem auto;
+  }
+  
+  #BMI .cardBody{
+    width: 470px;
+    text-align: center;
+  }
+
+  #BMI .yoga-logo{
+    width: 210px;
+    height: 210px;
+  }
+
+  .cardText p{
+    font-size: 1.2rem;
+  }
+
+  .footericons p{
+    font-size: 1.2rem;
+  }
+  .container input{
+    width: 150px;
+  }
+  #BMI label{
+    font-size: 1.3rem;
+  }
+
+
+}
+
+
+@media (max-width : 605px){
+  .forMobile{
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .home__Image img{
+    width: 100%;
+    height: auto;
+    margin: 2rem auto 1rem;
+  }
+  .home__details h2{
+    font-size: 2.3rem;
+  }
+
+  .home__details p{
+    font-size: 1.5rem;
+  }
+
+  #BMI .cardBody{
+    width: 430px;
+
+  }
+  #BMI .yoga-logo{
+    width: 190px;
+    height: 190px;
+  }
+
+  .btn-group .btn{
+    width: 220px;
+    height: 50px;
+    
+  }
+
+  .calculateBMIBTN .calculate{
+    width: 420px;
+    padding: 1.1rem;
+  }
+
+  .footericons i{
+    font-size: 1.6rem;
+  }
+
+}
+
+
+@media screen and (max-width: 531px){
+
+  #BMI .genderdiv{
+    margin: .5rem;
+  }
+  .ageContainer .ageNum{
+    padding: .4rem .5rem;    
+  }
+  
+  .container input{
+    width: 110px;
+  }
+  #BMI label{
+    font-size: 1.05rem;
+  }
+  
+  .weightdiv .ageNum{
+    padding: .4rem .5rem; 
+  }
+  
+  .heightDiv .ageNum{
+    padding: .4rem .5rem; 
+  }
+
+
+}
+
+
+@media screen and (max-width: 460px){
+  .wideScreen a:first-child{
+    font-size: 1.8rem;
+  }
+
+  .menuIcon i{
+    margin-top: 0;
+  }
+
+  .home__details h2{
+    font-size: 1.5rem;
+  }
+  .home__details p{
+    font-size: 1.5rem;
+  }
+  
+  .home__details .btn__home{
+    width: 250px;
+    
+  }
+  .btn__home a{
+    font-size: 1rem;
+  }
+
+  #BMI .cardBody{
+    width: 340px;
+
+  }
+  #BMI .yoga-logo{
+    width: 150px;
+    height: 150px;
+  }
+
+  .btn-group .btn{
+    width: 160px;
+  }
+  #BMI label{
+    font-size: .9rem;
+  }
+
+  .container input{
+    width: 70px;
+  }
+
+  .calculateBMIBTN .calculate{
+    width: 280px;
+    font-size: 1rem;
+  }
+  .cardText h2{
+    font-size: 1.3rem;
+  }
+  .cardText p{
+    font-size: 1rem;
+  }
+  .wideScreen .loginRemove{
+    display: none;
+  }
+
+}
+
+
+@media screen and (max-width: 380px){
+  #BMI .cardBody{
+    width: 270px;
+
+  }
+  #BMI .yoga-logo{
+    width: 100px;
+    height: 100px;
+  }
+
+  .btn-group .btn{
+    width: 130px;
+  }
+  #BMI label{
+    font-size: .8rem;
+  }
+
+  .container input{
+    width: 63px;
+  }
+
+  .cardText h2{
+    font-size: 1.1rem;
+  }
+  .cardText p{
+    font-size: .95rem;
+  }
+
+  .footericons p{
+    font-size: 1rem;
+  }
+
+  .footericons i{
+    font-size: 1.4rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
