@@ -43,7 +43,7 @@
         <button class="btn__home" type="submit"> <a href="#BMI">Go to BMI Calculator</a></button>
       </div>
       <div class="home__Image">
-        <img src="./Images/basketballWhite.png" alt="Model" width="853" height="1280">
+        <img src="./Images/FitnessModelBWhite.png" alt="Model" width="853" height="1280">
       </div>   
   </section>
 
@@ -88,8 +88,9 @@
                 </div>
             </div>
         </div>
+    <form action="">
     <h1>BMI Calculator</h1>
-
+        <!-- Gender section -->
     <div class="genderdiv">
       <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
@@ -100,36 +101,52 @@
     </div>
     </div>
 
+    <!-- Age section -->
+
     <div class="container ageContainer">
       <div class="agearea">
             <label class="ageLabel"><b>Age:</b></label>
-           <input type="number" class="ageNum">
+           <input type="number" class="ageNum" id="age">
       </div>
+      <!-- Weight section -->
         <div class="weight weightdiv">
             <label class="weightLabel"><b>Weight:</b></label>
-            <input type="number" class="ageNum">
+            <input type="number" class="ageNum" id="weight">
 
             <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
             <label class="btn btn-secondary" for="option1">Kg</label>
-
-            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-            <label class="btn btn-secondary" for="option2">Pound</label>
         </div>
+
+        <!-- Height section -->
 
       <div class="height heightDiv">
             <label class="weightLabel"><b>Height:</b></label>
-            <input type="number" class="ageNum">
+            <input type="number" class="ageNum" id="height">
             <input type="radio" class="btn-check" name="optionss" id="options3" autocomplete="off" checked>
-            <label class="btn btn-secondary" for="options3">Feet</label>
-            <input type="radio" class="btn-check" name="optionss" id="options4" autocomplete="off">
-            <label class="btn btn-secondary" for="options4">Meters</label>
+            <label class="btn btn-secondary" for="options3">CM</label>
       </div>
 
     </div>
-
+   
+      <!-- Button section -->
       <div class="calculateBMIBTN">
-          <button class="calculate" type="submit">Calculate</button>
+          <button class="calculate" type="submit" onclick="calculate()">Calculate</button>
+          <button class="clear" type="reset">Reset</button>
       </div>
+    </form>
+      <div class="result">
+        <p>Your BMI is: </p>
+        <div id="result">00.00</div>
+        <p class="comment"></p>
+      </div>
+
+            
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalText"></p>
+    </div>
+  </div>
 
     
   </section>
