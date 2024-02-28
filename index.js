@@ -35,7 +35,6 @@ var height = document.getElementById("height");
 var weight = document.getElementById("weight");
 var male = document.getElementById("btnradio1");
 var female = document.getElementById("btnradio2");
-var form = document.getElementById("form");
 let resultArea = document.querySelector(".comment");
 
 modalContent = document.querySelector(".modal-content");
@@ -81,17 +80,10 @@ function countBmi(){
     result = 'Extremely obese';
      }
 
-
-
 resultArea.style.display = "block";
 document.querySelector(".comment").innerHTML = `You are <span id="comment">${result}</span>`;
 document.querySelector("#result").innerHTML = bmi.toFixed(2);
-
 }
-
-
-
-
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {

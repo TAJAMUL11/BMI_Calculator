@@ -235,6 +235,7 @@ nav i{
   height: 100%;
   margin-top: 2rem;
   background-color: var(--BGCOLOR);
+  filter: brightness(160%);
 
 }
 img{
@@ -535,7 +536,7 @@ img{
   margin: auto;
   padding: 1.2rem;
   border: 1px solid #888;
-  width: 300px;
+  width: 500px;
   border-radius: 10px;
   box-shadow: #393c76 -1px 2px 2px 1px;
 }
@@ -855,7 +856,7 @@ footer{
   }
 
   .footericons i{
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
 
@@ -921,6 +922,10 @@ footer{
   #myModal .modal-content {
 
     width: 310px;
+  }
+  #modalText{
+    font-size: 1.2rem;
+    text-align: left;
   }
 
 }
