@@ -4,10 +4,10 @@ const img = document.querySelector('.toggle-icon img');
 icon.onclick = function(){
     document.body.classList.toggle('dark-mode');
     if(document.body.classList.contains('dark-mode')){
-        img.src ="./Images/sun.png";
+        img.src ="./Images/moonB.png";
     }
     else{
-        img.src ="./Images/moon.png";
+        img.src ="./Images/sun.png";
         
     }
 }
