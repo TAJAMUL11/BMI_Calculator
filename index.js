@@ -12,8 +12,6 @@ icon.onclick = function(){
     }
 }
 
-
-
 // MObile navbar
 
 function showSideBar(){
@@ -68,7 +66,7 @@ function countBmi(){
   var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100); // BMI formula//
       
   var result = '';
-  if(bmi<18.5){
+    if(bmi<18.5){
     result = 'Underweight';
      }else if(18.5<=bmi&&bmi<=24.9){
     result = 'Healthy';
@@ -96,5 +94,4 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
 
