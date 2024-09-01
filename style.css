@@ -236,6 +236,7 @@ nav i{
   margin-top: 2rem;
   background-color: var(--BGCOLOR);
   filter: brightness(160%);
+  
 
 }
 img{
@@ -246,6 +247,7 @@ img{
   width: min(100%, 40vw);
   height: 99.9vh;
   border-radius: 2px;
+  object-fit: contain;
 }
 
 
